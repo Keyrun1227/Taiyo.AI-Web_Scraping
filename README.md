@@ -2,11 +2,11 @@
 
 Welcome to the Data Engineering Trial Task project! This project showcases effective data scraping and standardization techniques for multiple sources while adhering to provided data standards and ensuring automation and continuity in data updating.
 
-![GitHub Repository Structure](images/github_repo_structure.png)
-*GitHub Repository Structure*
+*Desktop Mode*
+![Image Alt Text](https://github.com/Keyrun1227/Taiyo.AI-Web_Scraping/blob/main/data-botwindow.jpeg)
 
-![Responsive and Desktop Modes](images/website_modes.png)
-*Responsive and Desktop Modes*
+*Responsive Mobile Mode*
+![Image Alt Text](https://github.com/Keyrun1227/Taiyo.AI-Web_Scraping/blob/main/data-botmobile.png)
 
 ## 📁 Folder Structure
 
