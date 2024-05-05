@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Engineering Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                // sticky navbar on scroll script
+                if(this.scrollY > 20){
+                    $('.navbar').addClass("sticky");
+                }else{
+                    $('.navbar').removeClass("sticky");
+                }
+                
+                // scroll-up button show/hide script
+                if(this.scrollY > 500){
+                    $('.scroll-up-btn').addClass("show");
+                }else{
+                    $('.scroll-up-btn').removeClass("show");
+                }
+            });
+        
+            // slide-up script
+            $('.scroll-up-btn').click(function(){
+                $('html').animate({scrollTop: 0});
+                // removing smooth scroll on slide-up button click
+                $('html').css("scrollBehavior", "auto");
+            });
+        
+            $('.navbar .menu li a').click(function(){
+                // applying again smooth scroll on menu items click
+                $('html').css("scrollBehavior", "smooth");
+            });
+        
+            // toggle menu/navbar script
+            $('.menu-btn').click(function(){
+                $('.navbar .menu').toggleClass("active");
+                $('.menu-btn i').toggleClass("active");
+            });
+        
+            // typing text animation script
+            var typed = new Typed(".typing", {
+                strings: ["Data Cleansing", "Data Integration", "Data Transformation"],
+                typeSpeed: 100,
+                backSpeed: 60,
+                loop: true
+            });
+        
+            var typed = new Typed(".typing-2", {
+                strings: ["Data Cleansing", "Data Integration", "Data Transformation"],
+                typeSpeed: 100,
+                backSpeed: 60,
+                loop: true
+            });
+        
+            // owl carousel script
+            $('.carousel').owlCarousel({
+                margin: 20,
+                loop: true,
+                autoplay: true,
+                autoplayTimeOut: 2000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0:{
+                        items: 1,
+                        nav: false
+                    },
+                    600:{
+                        items: 2,
+                        nav: false
+                    },
+                    1000:{
+                        items: 3,
+                        nav: false
+                    }
+                }
+            });
+        });
+         
+    </script>
+</head>
+<body>
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-5--v1.png" alt="image">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">Data Engineering Bot</h4>
+                        <p class="chatbox__description--header">Hi. My name is <span style="color:#fff">Data Engineer Bot</span> How can I help you?</p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div></div>
+                </div>
+                <div class="chatbox__footer">
+                    <input type="text" placeholder="Write a message...">
+                    <button class="chatbox__send--footer send__button">Send</button>
+                </div>
+            </div>
+            <div class="chatbox__button">
+            
+                <button><img src="/static/images/chatbox-icon.svg" /></button>
+
+            </div>
+        </div>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#">Data-<span>Engineer Bot</span></a></div>
+            <ul class="menu">
+                <li><a href="#home" class="menu-btn">Home</a></li>
+                <li><a href="#about" class="menu-btn">About</a></li>
+                <li><a href="#services" class="menu-btn">Services</a></li>
+                <li><a href="#contact" class="menu-btn">Contact</a></li>
+                <li><a href="https://github.com/Keyrun1227" target="_blank" class="menu-btn">Admin</a></li>
+
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+        <!-- home section start -->
+        <section class="home" id="home">
+            <div class="max-width">
+                <div class="home-content">
+                    <div class="text-1">Hello!!,my name is</div>
+                    <div class="text-2" style="color:red">Data Engineer Bot</div>
+                    <div class="text-3" >And I can help with <span class="typing"></span></div>
+                    <a href="#contact">Get Assistance</a>
+                </div>
+                <video autoplay muted loop id="bg-video">
+                    <source src="/static/images/mainentry1.mp4" type="video/mp4">
+                    <!-- Include additional sources for different video formats if needed -->
+                </video>
+            </div>
+        </section>
+    
+        <!-- about section start -->
+        <section class="about" id="about" >
+            <div class="max-width">
+                <h2 class="title">About</h2>
+                <div class="about-content">
+                    <div class="column left">
+                        <img src="/static/images/a.png" />
+    
+                    </div>
+                    <div class="column right">
+                        <div class="text" >Data Engineer Bot is here to assist you with<span class="typing-2"></span></div>
+                        <p ><b>Data Engineering Tasks</b> involve a range of processes, including data cleansing, data integration, and data transformation. These tasks are crucial for ensuring that data is accurate, consistent, and ready for analysis.
+
+                            <p >Whether you're working with big data or small datasets, Data Engineer Bot can help streamline your data pipeline and optimize your workflow.</p>
+                        </p>
+                        <a href="#services">Explore Services</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+        <section class="services" id="services">
+            <h2 class="title">Data Engineering Services</h2>
+            <div class="contain">
+                <div class="container">
+                    <h1 class="mt-5">Data Processing</h1>
+                    <form action="/data-process" method="post" enctype="multipart/form-data" class="mt-4">
+                        <div class="mb-3">
+                            <label for="file" class="form-label">Upload CSV file:</label>
+                            <input type="file" id="file" name="file" class="form-control" accept=".csv">
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">Process</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    
+    
+       
+    
+        <!-- contact section start -->
+        <section class="contact" id="contact">
+            <div class="max-width">
+                <h2 class="title">Contact me</h2>
+                <div class="contact-content">
+                    <div class="column left">
+                        <div class="text">Get in Touch</div>
+                        <p>Feel free to reach out to us for any inquiries or assistance. We're here to help!</p>
+                        <div class="icons">
+                            <div class="row">
+                                <i class="fas fa-user"></i>
+                                <div class="info">
+                                    <div class="head">Name</div>
+                                    <div class="sub-title">Data Engineer Bot</div>
+                                                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="info">
+                                    <div class="head">Address</div>
+                                    <div class="sub-title">Rajam, Andhra Pradesh</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fas fa-envelope"></i>
+                                <div class="info">
+                                    <div class="head">Email</div>
+                                    <div class="sub-title">chitturidurgasatyasaikiran@gmail.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column right">
+                        <div class="text">Message me</div>
+                            <form method="post" action="/appoint">
+                   
+                            <div class="fields">
+                                <div class="field name">
+                                    <input type="text" placeholder="Enter Your Name" required>
+                                </div>
+                                <div class="field email">
+                                    <input type="email" name="gmailid"  placeholder="Enter Your Email" required>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <input type="text" name="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="field textarea">
+                                <textarea cols="30" rows="10" name="messages" placeholder="Message.." required></textarea>
+                            </div>
+                            <div class="button-area">
+                                <button type="submit">Send message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+        <!-- footer section start -->
+        <footer>
+            <span>Created By <a href="https://www.linkedin.com/in/durga-satya-sai-kiran-chitturi-69abba220" target="_blank">Kiran</a> | <span class="far fa-copyright"></span> 2024 All rights reserved.</span>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            class Chatbox {
+                constructor() {
+                    this.args = {
+                        openButton: document.querySelector(".chatbox__button"),
+                        chatBox: document.querySelector(".chatbox__support"),
+                        sendButton: document.querySelector(".send__button"),
+                    };
+    
+                    this.state = false;
+                    this.messages = [];
+                }
+    
+                display() {
+                    const { openButton, chatBox, sendButton } = this.args;
+    
+                    openButton.addEventListener("click", () => this.toggleState(chatBox));
+    
+                    sendButton.addEventListener("click", () =>
+                        this.onSendButton(chatBox)
+                    );
+    
+                    const node = chatBox.querySelector("input");
+                    node.addEventListener("keyup", ({ key }) => {
+                        if (key === "Enter") {
+                            this.onSendButton(chatBox);
+                        }
+                    });
+                }
+    
+                toggleState(chatbox) {
+                    this.state = !this.state;
+    
+                    // show or hides the box
+                    if (this.state) {
+                        chatbox.classList.add("chatbox--active");
+                    } else {
+                        chatbox.classList.remove("chatbox--active");
+                    }
+                }
+    
+                onSendButton(chatbox) {
+                    var textField = chatbox.querySelector("input");
+                    let text1 = textField.value;
+                    if (text1 === "") {
+                        return;
+                    }
+    
+                    let msg1 = { name: "User", message: text1 };
+                    this.messages.push(msg1);
+                    fetch('http://127.0.0.1:8000/predict', {
+                        method: 'POST',
+                        body: JSON.stringify({ message: text1 }),
+                        mode: 'cors',
+                        headers: {
+                          'Content-Type': 'application/json'
+                        },
+                    })
+                        .then((r) => r.json())
+                        .then((r) => {
+                            let msg2 = { name: "GMRIT", message: r.answer };
+                            this.messages.push(msg2);
+                            this.updateChatText(chatbox);
+                            textField.value = "";
+                        })
+                        .catch((error) => {
+                            console.error("Error:", error);
+                            this.updateChatText(chatbox);
+                        })
+                }
+                updateChatText(chatbox) {
+                    var html = '';
+                    this.messages.slice().reverse().forEach(function(item, index) {
+                        if (item.name === "GMRIT")
+                        {
+                            html += '<div class="messages__item messages__item--visitor">' + item.message + '</div>'
+                        }
+                        else
+                        {
+                            html += '<div class="messages__item messages__item--operator">' + item.message + '</div>'
+                        }
+                      });
+                    const chatmessage = chatbox.querySelector('.chatbox__messages');
+                    chatmessage.innerHTML = html;
+                }
+                
+            }
+            
+            
+            
+            const chatbox = new Chatbox();
+            chatbox.display();
+            
+        </script>
+    </body>
+    </html>
+    
+    
