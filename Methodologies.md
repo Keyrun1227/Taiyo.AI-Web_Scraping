@@ -49,4 +49,3 @@ This script demonstrates continuous data updating by implementing an automated p
 2. The main function runs in an infinite loop with a delay for continuous updating.
 3. Data scraping and standardization process is executed at regular intervals.
 4. Standardized data is continuously updated in the `standardized_data.csv` file in the `data` folder.
-
